@@ -34,46 +34,53 @@
     "baseUrl": ".",
     "pretty": true,
     "strict": true,
-    // Remix takes care of building everything in `remix build`.
     "noEmit": true,
     "lib": [
       "DOM.Iterable",
       "ES2022",
-      "DOM",
+      "DOM"
     ],
     "types": [
       "@remix-run/node/globals",
       "@remix-run/dev"
     ],
     "paths": {
-      "@components/*": [
+      "#components/*": [
         "./app/components/*"
       ],
-      "@routes/*": [
+      "#routes/*": [
         "./app/routes/*"
       ],
-      "@styles/*": [
+      "#styles/*": [
         "./app/styles/*"
       ],
-      "@hooks/*": [
+      "#assets/*": [
+        "./app/assets/*"
+      ],
+      "#hooks/*": [
         "./app/hooks/*"
       ],
-      "@utils/*": [
+      "#utils/*": [
         "./app/utils/*"
       ],
-      "@types/*": [
-        "./app/@types/*"
+      "#types/*": [
+        "app/types/*"
       ],
-      "@public/*": [
+      "#public/*": [
         "./public/*"
       ],
-      "~/*": [
+      "#/*": [
         "./app/*"
-      ],
+      ]
     }
   },
   "exclude": [
     "**/node_modules",
-    "**/.*/",
+    "**/.*/"
   ],
+  "include": [
+    "remix.env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

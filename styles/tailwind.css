@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	html {
+		font-family: "Nunito Sans", "Roboto", "Arial", "sans-serif";
+		scroll-behavior: smooth;
+	}
+}
+
 @layer components {
 	.custom-class {
 		@apply ...;

@@ -1,14 +1,23 @@
-import { NavLink } from "@remix-run/react";
+import { type NavLinkProps, NavLink } from "@remix-run/react";
 
-export const HeaderNavLink = ({ title, to }: Props) => (
+export const HeaderNavLink = ({ title, to, ...rest }: Props) => (
 	<NavLink
-		className="flex items-center justify-center hover:bg-orange-600 px-2 h-full"
+		className="flex items-center justify-cente px-4 h-full font-medium text-gray-500"
 		aria-label={title}
 		title={title}
 		to={to}
+		{...rest}
 	>
 		{title}
 	</NavLink>
 );
 
-type Props = Readonly<{ title: string; to: string }>;
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+// Types:
+
+interface Props extends NavLinkProps {
+	readonly title: string;
+	readonly to: string;
+}

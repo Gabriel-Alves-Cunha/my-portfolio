@@ -10,8 +10,8 @@ import {
 	Meta,
 } from "@remix-run/react";
 
-import { Footer } from "@components/Footer";
-import { Header } from "@components/Header";
+import { Footer } from "#components/Footer";
+import { Header } from "#components/Header";
 
 import styles from "./tailwind.css";
 
@@ -43,7 +43,7 @@ export const meta: MetaFunction = () => {
 
 export const links: LinksFunction = () => [
 	{
-		href: "https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap",
+		href: "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito+Sans:wght@400;700&display=swap",
 		rel: "stylesheet",
 	},
 	{
@@ -70,7 +70,7 @@ function Document({ children, title = "Hacker News" }: DocumentProps) {
 				<Meta />
 			</head>
 
-			<body className="bg-[#202012] selection:bg-orange-500 selection:text-white">
+			<body className="">
 				{children}
 
 				<ScrollRestoration />
