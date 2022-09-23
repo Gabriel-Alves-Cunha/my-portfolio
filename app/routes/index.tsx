@@ -1,9 +1,9 @@
 import { SocialLinks } from "#components/SocialLinks";
-import { Experience } from "#components/Experience";
-import { Portfolio } from "#components/Projects";
-import { Contact } from "#components/Contact";
-import { About } from "#components/About";
-import { Home } from "#components/Home";
+import { Experience } from "#components/Sections/Experience";
+import { Portfolio } from "#components/Sections/Projects";
+import { Contact } from "#components/Sections/Contact";
+import { About } from "#components/Sections/About";
+import { Home } from "#components/Sections/Home";
 
 export default function Index() {
 	return (

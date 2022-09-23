@@ -10,7 +10,6 @@ import {
 	Meta,
 } from "@remix-run/react";
 
-import { Footer } from "#components/Footer";
 import { Header } from "#components/Header";
 
 import styles from "./tailwind.css";
@@ -59,7 +58,7 @@ export const links: LinksFunction = () => [
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 
-function Document({ children, title = "Hacker News" }: DocumentProps) {
+function Document({ children, title = "My Portfolio" }: DocumentProps) {
 	return (
 		<html lang="en">
 			<head>
@@ -93,8 +92,6 @@ export default function App() {
 			<main className="min-h-full">
 				<Outlet />
 			</main>
-
-			<Footer />
 		</Document>
 	);
 }

@@ -7,6 +7,8 @@ import reactImg from "#assets/react.png";
 import htmlImg from "#assets/html.png";
 import cssImg from "#assets/css.png";
 
+import { UnderlinedTitle } from "../UnderlinedTitle";
+
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -20,9 +22,7 @@ export function Experience() {
 		>
 			<div className="flex flex-col justify-center w-full h-full text-white max-w-screen-lg mx-auto p-4">
 				<div>
-					<p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
-						Experience
-					</p>
+					<UnderlinedTitle title="Experience" />
 
 					<p className="py-6">
 						These are some of the technologies I&apos;ve worked with

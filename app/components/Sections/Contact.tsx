@@ -1,3 +1,6 @@
+import { BlueAnchorButton } from "#components/BlueAnchorButton";
+import { UnderlinedTitle } from "../UnderlinedTitle";
+
 export function Contact() {
 	return (
 		<div
@@ -6,9 +9,7 @@ export function Contact() {
 		>
 			<div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
 				<div className="pb-8">
-					<p className="text-4xl font-bold inline border-b-4 border-gray-500">
-						Contact
-					</p>
+					<UnderlinedTitle title="Contact" />
 
 					<p className="py-6">Submit the form below to get in touch with me</p>
 				</div>
@@ -34,18 +35,17 @@ export function Contact() {
 						/>
 
 						<textarea
-							className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+							className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none resize-none"
 							placeholder="Enter your message"
 							name="Message"
 							rows={10}
-						></textarea>
+						/>
 
-						<button
-							className="flex items-center rounded-md hover:scale-110 duration-200 text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto"
+						<BlueAnchorButton
+							className="mx-auto self-center mt-8"
+							title="Say Hi"
 							type="submit"
-						>
-							Say hi
-						</button>
+						/>
 					</form>
 				</div>
 			</div>
