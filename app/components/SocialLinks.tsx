@@ -10,13 +10,13 @@ import { HiOutlineMail as Mail } from "react-icons/hi";
 export function SocialLinks() {
 	return (
 		<ul className="hidden lg:flex flex-col top-[35%] left-0 fixed">
-			{links.map(link => (
+			{contactLinks.map(link => (
 				<li
-					className="flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-gray-500 hover:rounded-md duration-200 hover:ml-[-10px] first:rounded-tr-md last:rounded-br-md"
+					className="flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-secondary hover:rounded-md duration-200 hover:ml-[-10px] first:rounded-tr-md last:rounded-br-md"
 					key={link.href}
 				>
 					<a
-						className="flex justify-between items-center w-full text-white"
+						className="flex justify-between items-center h-full w-full text-white"
 						rel="noreferrer"
 						target="_blank" // Open on a new (blank) tab!
 						{...link}
@@ -35,7 +35,7 @@ export function SocialLinks() {
 // Constants:
 
 const size = 30;
-const links = [
+export const contactLinks = [
 	{
 		href: "https://www.linkedin.com/in/gabriel-alves-cunha/",
 		"aria-label": "Access my LinkedIn",

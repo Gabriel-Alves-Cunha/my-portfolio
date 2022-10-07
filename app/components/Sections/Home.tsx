@@ -4,13 +4,10 @@ import HeroImage from "#assets/heroImage.png";
 
 export function Home() {
 	return (
-		<div
-			className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
-			id="Home"
-		>
+		<div className="min-h-full w-full" id="Home">
 			<div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-				<div className="flex flex-col justify-center h-full">
-					<h2 className="text-4xl sm:text-7xl font-bold text-white">
+				<div className="flex flex-col justify-center h-full md:w-full">
+					<h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white">
 						I&apos;m a Full Stack Developer
 					</h2>
 
@@ -24,9 +21,9 @@ export function Home() {
 					<BlueAnchorButton title="Projects" arrow />
 				</div>
 
-				<div>
+				<div className="mt-9 md:ml-9">
 					<img
-						className="rounded-2xl mx-auto w-2/3 md:w-full"
+						className="rounded-2xl sm:mx-auto w-2/3 md:w-full"
 						alt="My profile"
 						src={HeroImage}
 					/>

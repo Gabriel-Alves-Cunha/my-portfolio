@@ -11,10 +11,7 @@ import { UnderlinedTitle } from "../UnderlinedTitle";
 
 export function Portfolio() {
 	return (
-		<div
-			className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
-			id="Projects"
-		>
+		<div className="w-full text-white md:h-screen" id="Projects">
 			<div className="flex flex-col justify-center w-full h-full max-w-screen-lg p-4 mx-auto">
 				<div className="pb-8">
 					<UnderlinedTitle title="Projects" />
@@ -69,6 +66,12 @@ function Card({ src, alt, demo, code }: CardProps) {
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // Constants:
+
+/**
+ * muse
+ * super mario
+ * 
+ */
 
 const imagesOfProjects = [{ src: "", alt: "", demo: "", code: "" }];
 

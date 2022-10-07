@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 export function useScrollDirection() {
-	const [scrollDirection, setScrollDirection] = useState<Direction>(0);
+	const [scrollDirection, setScrollDirection] = useState<Direction>("none");
 
 	useEffect(() => {
 		let lastScrollY = window.scrollY;
 
 		const updateScrollDirection = () => {
 			const { scrollY } = window;
-			const direction = scrollY > lastScrollY ? -1 : 1;
+			const direction = scrollY > lastScrollY ? "down" : "up";
 
 			if (
 				direction !== scrollDirection &&
@@ -27,4 +27,4 @@ export function useScrollDirection() {
 	return scrollDirection;
 }
 
-type Direction = -1 | 0 | 1;
+type Direction = "down" | "none" | "up";

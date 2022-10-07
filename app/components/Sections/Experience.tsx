@@ -16,10 +16,7 @@ import { UnderlinedTitle } from "../UnderlinedTitle";
 
 export function Experience() {
 	return (
-		<div
-			className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
-			id="Experience"
-		>
+		<div className="w-full h-screen" id="Experience">
 			<div className="flex flex-col justify-center w-full h-full text-white max-w-screen-lg mx-auto p-4">
 				<div>
 					<UnderlinedTitle title="Experience" />

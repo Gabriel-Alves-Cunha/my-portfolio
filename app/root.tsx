@@ -13,6 +13,7 @@ import {
 import { Header } from "#components/Header";
 
 import styles from "./tailwind.css";
+import lbg from "./bg.css";
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -42,7 +43,7 @@ export const meta: MetaFunction = () => {
 
 export const links: LinksFunction = () => [
 	{
-		href: "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito+Sans:wght@400;700&display=swap",
+		href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Nunito+Sans:wght@400;700&display=swap",
 		rel: "stylesheet",
 	},
 	{
@@ -52,6 +53,7 @@ export const links: LinksFunction = () => [
 	},
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "stylesheet", href: styles },
+	{ rel: "stylesheet", href: lbg },
 ];
 
 ////////////////////////////////////////////////
@@ -69,7 +71,7 @@ function Document({ children, title = "My Portfolio" }: DocumentProps) {
 				<Meta />
 			</head>
 
-			<body className="">
+			<body>
 				{children}
 
 				<ScrollRestoration />
