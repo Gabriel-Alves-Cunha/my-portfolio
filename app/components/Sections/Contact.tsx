@@ -16,21 +16,21 @@ export function Contact() {
 				method="POST"
 			>
 				<input
-					className="p-2 w-full lg:w-1/2 bg-primary border-2 rounded-md text-white focus:outline-none"
+					className="p-2 w-full lg:w-1/2 font-base tracking-wide bg-primary border-2 rounded-md text-white focus:outline-none"
 					placeholder="Enter your name"
 					type="text"
 					name="Name"
 				/>
 
 				<input
-					className="p-2 w-full lg:w-1/2 bg-primary border-2 rounded-md text-white focus:outline-none"
+					className="p-2 w-full lg:w-1/2 font-base tracking-wide bg-primary border-2 rounded-md text-white focus:outline-none"
 					placeholder="Enter your email"
 					type="email"
 					name="Email"
 				/>
 
 				<textarea
-					className="p-2 w-full lg:w-1/2 bg-primary border-2 rounded-md text-white focus:outline-none resize-none"
+					className="p-2 w-full lg:w-1/2 font-base tracking-wide bg-primary border-2 rounded-md text-white focus:outline-none resize-none"
 					placeholder="Enter your message"
 					name="Message"
 					spellCheck

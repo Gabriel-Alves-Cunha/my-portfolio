@@ -31,31 +31,33 @@ export function Projects() {
 
 function Card({ src, description, demo, code }: CardProps) {
 	return (
-		<div
-			className="flex flex-col justify-between h-80 overflow-y-auto overflow-x-hidden shadow-elevation-medium shadow-gray-600 rounded-lg shadow-none hover:shadow-elevation-high duration-150"
-			title={description}
-		>
+		<div className="group">
 			<div
-				className="h-full w-full rounded-md object-none bg-cover bg-pan-right"
-				style={{ backgroundImage: `url("${src}")` }}
-			/>
+				className="flex flex-col justify-between h-80 overflow-y-auto overflow-x-hidden rounded-lg will-change-transform shadow-none group-hover:shadow-elevation group-hover:translate-x-1 group-hover:-translate-y-2 duration-150"
+				title={description}
+			>
+				<div
+					className="h-full w-full rounded-md object-none bg-cover bg-pan-right"
+					style={{ backgroundImage: `url("${src}")` }}
+				/>
 
-			<div className="flex items-center justify-center">
-				{demo && (
+				<div className="flex items-center justify-center">
+					{demo && (
+						<Link
+							className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
+							to={demo}
+						>
+							Demo
+						</Link>
+					)}
+
 					<Link
 						className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
-						to={demo}
+						to={code}
 					>
-						Demo
+						Code
 					</Link>
-				)}
-
-				<Link
-					className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
-					to={code}
-				>
-					Code
-				</Link>
+				</div>
 			</div>
 		</div>
 	);

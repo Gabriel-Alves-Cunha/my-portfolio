@@ -13,6 +13,14 @@ export function Header() {
 	const [showNav, setShowNav] = useState(false);
 	const scrollDirection = useScrollDirection();
 
+	const navLinksJSX = navLinks.map(link => (
+		<HeaderNavLink
+			onClick={() => setShowNav(false)}
+			key={link.title}
+			{...link}
+		/>
+	));
+
 	return (
 		<header
 			className={`sticky ${
@@ -23,33 +31,23 @@ export function Header() {
 				Gabriel Alves Cunha
 			</span>
 
-			<nav className="hidden gap-9 md:flex">
-				{navLinks.map(link => (
-					<HeaderNavLink key={link.title} {...link} />
-				))}
-			</nav>
+			<nav className="hidden gap-9 md:flex">{navLinksJSX}</nav>
 
-			<div
-				className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-				onClick={() => setShowNav(!showNav)}
+			<nav
+				className="md:hidden flex flex-col justify-center items-center top-0 left-0 bg-primary text-gray-500 [&_a]:h-fit [&_a]:px-4 [&_a]:py-6 [&_a]:text-4xl"
+				role="dialog"
 			>
-				{showNav ? <Close size={30} /> : <Menu size={30} />}
-			</div>
-
-			{showNav && (
-				<nav
-					className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen bg-primary text-gray-500 [&_a]:h-fit [&_a]:px-4 [&_a]:py-6 [&_a]:text-4xl"
-					role="dialog"
+				<button
+					className="cursor-pointer pr-4 text-gray-500 md:hidden"
+					onClick={() => setShowNav(!showNav)}
 				>
-					{navLinks.map(link => (
-						<HeaderNavLink
-							onClick={() => setShowNav(false)}
-							key={link.title}
-							{...link}
-						/>
-					))}
-				</nav>
-			)}
+					{showNav ? <Close size={30} /> : <Menu size={30} />}
+				</button>
+
+				<ul className={`bg-primary nav ${showNav ? "show" : ""}`}>
+					{navLinksJSX}
+				</ul>
+			</nav>
 		</header>
 	);
 }
