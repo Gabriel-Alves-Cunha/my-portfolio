@@ -2,7 +2,7 @@ import { type NavLinkProps, NavLink } from "@remix-run/react";
 
 export const HeaderNavLink = ({ title, to, ...rest }: Props) => (
 	<NavLink
-		className="flex items-center justify-cente px-4 h-full font-medium text-gray-500 hover:text-white duration-150"
+		className="relative block h-full font-medium text-white hover:text-underline my-underline"
 		aria-label={title}
 		title={title}
 		to={to}

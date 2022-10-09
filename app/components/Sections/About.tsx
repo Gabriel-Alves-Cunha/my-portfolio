@@ -1,70 +1,62 @@
 import { FaGithub as Github, FaLinkedin as Linkedin } from "react-icons/fa";
 import { HiOutlineAcademicCap as Academic } from "react-icons/hi";
 import { BsFillPersonLinesFill as Person } from "react-icons/bs";
-import { BsCalendar4 as Calendar } from "react-icons/bs";
+import { MdCalendarToday as Calendar } from "react-icons/md";
 import { HiOutlineMail as Mail } from "react-icons/hi";
-import { WiStars as Stars } from "react-icons/wi";
+import { TbMoonStars as Stars } from "react-icons/tb";
 import { BiMapAlt as Map } from "react-icons/bi";
-import { BsFlag as Flag } from "react-icons/bs";
+import { FiFlag as Flag } from "react-icons/fi";
 
-import { UnderlinedTitle } from "../UnderlinedTitle";
 import { yearsSince } from "#utils/yearsSince";
+import { Section } from "#components/Section";
+import { Title } from "#components/Title";
+import { P } from "#components/P";
 
 export function About() {
 	return (
-		<div className="w-full pt-6 min-h-screen text-white" id="About">
-			<div className="flex flex-col justify-center w-full h-full max-w-screen-lg p-4 mx-auto">
-				<div className="mb-8">
-					<UnderlinedTitle title="About" />
-				</div>
+		<Section id="About">
+			<Title title="About" />
 
-				<p className="text-xl mt-10">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
-					unde veritatis molestias quia dolore pariatur et blanditiis, vitae
-					nesciunt ipsa ut error, officiis assumenda dolorum. Quasi sit eaque
-					eius dicta.
-				</p>
+			<P text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, unde veritatis molestquia dolore pariatur et blanditiis, vitae nesciunt ipsa ut error, officiis assumenda dolorum. Quasi sit eaque eius dicta." />
 
-				<br />
+			<br />
 
-				<ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 my-8 p-8 w-full rounded-xl bg-secondary">
-					{aboutItems.map(({ label, text, Icon }, index) => (
-						<li className="col-span-1 flex items-start gap-x-2" key={index}>
-							<Icon className="h-5 w-5 text-white" size={24} />
+			<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 my-8 p-8 w-full rounded-xl bg-secondary text-sm">
+				{aboutItems.map(({ label, text, Icon }, index) => (
+					<li className="flex items-start gap-x-2" key={index}>
+						<div className="flex justify-center items-center">
+							<Icon size={24} />
+						</div>
 
-							<span className="text-sm font-bold text-white">{label}:</span>
+						<span className="font-bold">{label}:</span>
 
-							<span className=" text-sm text-gray-300">{text}</span>
-						</li>
-					))}
-				</ul>
+						<span className="text-gray-300">{text}</span>
+					</li>
+				))}
+			</ul>
 
-				<ul className="lg:hidden grid grid-cols-1 gap-4 sm:grid-cols-2 my-8 p-8 w-full rounded-xl bg-secondary">
-					{contactItems.map(({ label, Icon, href }) => (
-						<a
-							className="col-span-1 flex items-center gap-x-2"
-							rel="noreferrer"
-							target="_blank" // Open on a new (blank) tab!
-							href={href}
-							key={href}
-						>
-							{Icon}
+			<ul className="lg:hidden grid grid-cols-1 gap-4 sm:grid-cols-2 my-8 p-8 w-full rounded-xl bg-secondary">
+				{contactItems.map(({ label, Icon, href }) => (
+					<a
+						className="group w-fit"
+						rel="noreferrer"
+						target="_blank" // Open on a new (blank) tab!
+						href={href}
+						key={href}
+					>
+						<div className="flex flex-row items-center gap-x-2 group-hover:pulsate-fwd">
+							<Icon size={24} />
 
-							<span className="text-sm font-bold text-white">{label}</span>
-						</a>
-					))}
-				</ul>
+							<span className="text-sm font-bold">{label}</span>
+						</div>
+					</a>
+				))}
+			</ul>
 
-				<br />
+			<br />
 
-				<p className="text-xl">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-					enim reiciendis debitis autem amet necessitatibus error corrupti
-					incidunt soluta ipsam, quas accusamus nam dolorum maiores eligendi sit
-					illum alias explicabo!
-				</p>
-			</div>
-		</div>
+			<P text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis enim reiciendis debitis  utem amet necessitatibus error corrupti	incidunt soluta ipsam, quas accusamus nam dolorum maiores eligendi sit illum alias explicabo!" />
+		</Section>
 	);
 }
 
@@ -97,26 +89,26 @@ const contactItems = [
 	{
 		href: "https://github.com/Gabriel-Alves-Cunha/",
 		"aria-label": "Access my Github",
-		Icon: <Github size={24} />,
 		label: "Github",
+		Icon: Github,
 	},
 	{
 		href: "https://www.linkedin.com/in/gabriel-alves-cunha/",
 		"aria-label": "Access my LinkedIn",
-		Icon: <Linkedin size={24} />,
 		label: "Linkedin",
+		Icon: Linkedin,
 	},
 	{
 		href: "mailto:gabriel925486@gmail.com",
-		Icon: <Mail size={24} />,
 		"aria-label": "Mail me",
 		label: "Email",
+		Icon: Mail,
 	},
 	{
 		"aria-label": "Download my Resume",
-		Icon: <Person size={24} />,
 		href: "/resume.pdf",
 		label: "Resume",
 		download: true,
+		Icon: Person,
 	},
 ];

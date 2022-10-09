@@ -13,7 +13,6 @@ import {
 import { Header } from "#components/Header";
 
 import styles from "./tailwind.css";
-import lbg from "./bg.css";
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -53,7 +52,6 @@ export const links: LinksFunction = () => [
 	},
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "stylesheet", href: styles },
-	{ rel: "stylesheet", href: lbg },
 ];
 
 ////////////////////////////////////////////////

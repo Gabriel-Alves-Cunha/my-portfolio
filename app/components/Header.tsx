@@ -17,13 +17,13 @@ export function Header() {
 		<header
 			className={`sticky ${
 				scrollDirection === "down" ? "-top-16" : "top-0"
-			} flex justify-between items-center w-full h-16 text-white bg-primary px-4 transition-all duration-300 z-10`}
+			} flex justify-between items-center w-full h-16 text-white bg-primary px-10 transition-all duration-300 z-10`}
 		>
 			<span className="text-2xl lg:text-4xl font-signature">
 				Gabriel Alves Cunha
 			</span>
 
-			<nav className="hidden md:flex">
+			<nav className="hidden gap-9 md:flex">
 				{navLinks.map(link => (
 					<HeaderNavLink key={link.title} {...link} />
 				))}

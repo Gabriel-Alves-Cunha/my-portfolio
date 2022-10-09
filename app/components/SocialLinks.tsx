@@ -1,6 +1,6 @@
 import { FaGithub as Github, FaLinkedin as Linkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill as Person } from "react-icons/bs";
-import { HiOutlineMail as Mail } from "react-icons/hi";
+import { IoMailOutline as Email } from "react-icons/io5";
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -17,6 +17,7 @@ export function SocialLinks() {
 				>
 					<a
 						className="flex justify-between items-center h-full w-full text-white"
+						aria-label={link.title}
 						rel="noreferrer"
 						target="_blank" // Open on a new (blank) tab!
 						{...link}
@@ -38,7 +39,6 @@ const size = 30;
 export const contactLinks = [
 	{
 		href: "https://www.linkedin.com/in/gabriel-alves-cunha/",
-		"aria-label": "Access my LinkedIn",
 		title: "Access my LinkedIn",
 		children: (
 			<>
@@ -48,7 +48,6 @@ export const contactLinks = [
 	},
 	{
 		href: "https://github.com/Gabriel-Alves-Cunha/",
-		"aria-label": "Access my Github",
 		title: "Access my Github",
 		children: (
 			<>
@@ -58,16 +57,14 @@ export const contactLinks = [
 	},
 	{
 		href: "mailto:gabriel925486@gmail.com",
-		"aria-label": "Mail me",
 		title: "Mail me",
 		children: (
 			<>
-				Mail <Mail size={size} />
+				Mail <Email size={size} />
 			</>
 		),
 	},
 	{
-		"aria-label": "Download my Resume",
 		title: "Download my Resume",
 		href: "/resume.pdf",
 		download: true,

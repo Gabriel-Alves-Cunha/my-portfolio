@@ -1,3 +1,7 @@
+import { Section } from "#components/Section";
+import { Title } from "#components/Title";
+import { P } from "#components/P";
+
 import javascriptImg from "#assets/javascript.png";
 import tailwindImg from "#assets/tailwind.png";
 import graphqlImg from "#assets/graphql.png";
@@ -7,8 +11,6 @@ import reactImg from "#assets/react.png";
 import htmlImg from "#assets/html.png";
 import cssImg from "#assets/css.png";
 
-import { UnderlinedTitle } from "../UnderlinedTitle";
-
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -16,23 +18,17 @@ import { UnderlinedTitle } from "../UnderlinedTitle";
 
 export function Experience() {
 	return (
-		<div className="w-full h-screen" id="Experience">
-			<div className="flex flex-col justify-center w-full h-full text-white max-w-screen-lg mx-auto p-4">
-				<div>
-					<UnderlinedTitle title="Experience" />
+		<Section id="Experience">
+			<Title title="Experience" />
 
-					<p className="py-6">
-						These are some of the technologies I&apos;ve worked with
-					</p>
-				</div>
+			<P text="These are some of the technologies I've worked with" />
 
-				<div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:p-0">
-					{techs.map(tech => (
-						<Card key={tech.src} {...tech} />
-					))}
-				</div>
+			<div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:p-0">
+				{techs.map(tech => (
+					<Card key={tech.src} {...tech} />
+				))}
 			</div>
-		</div>
+		</Section>
 	);
 }
 

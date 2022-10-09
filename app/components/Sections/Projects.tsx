@@ -1,31 +1,26 @@
+import { Section } from "#components/Section";
+import { Title } from "#components/Title";
 import { Link } from "@remix-run/react";
-
-import { UnderlinedTitle } from "../UnderlinedTitle";
-
-// import imagesOfProjects from "@assets/portfolio/foo.bar"
+import { P } from "#components/P";
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // Main function:
 
-export function Portfolio() {
+export function Projects() {
 	return (
-		<div className="w-full text-white md:h-screen" id="Projects">
-			<div className="flex flex-col justify-center w-full h-full max-w-screen-lg p-4 mx-auto">
-				<div className="pb-8">
-					<UnderlinedTitle title="Projects" />
+		<Section id="Projects">
+			<Title title="Projects" />
 
-					<p className="py-6">Check out some of my work here</p>
-				</div>
+			<P text="Check out some of my work here" />
 
-				<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-					{imagesOfProjects.map(img => (
-						<Card key={img.src} {...img} />
-					))}
-				</div>
+			<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+				{cardsOfProjects.map(card => (
+					<Card key={card.src} {...card} />
+				))}
 			</div>
-		</div>
+		</Section>
 	);
 }
 
@@ -34,25 +29,29 @@ export function Portfolio() {
 ////////////////////////////////////////////////
 // Helper function:
 
-function Card({ src, alt, demo, code }: CardProps) {
+function Card({ src, description, demo, code }: CardProps) {
 	return (
-		<div className="shadow-md shadow-gray-600 rounded-lg">
-			<img
-				className="rounded-md duration-200 hover:scale-105 aspect"
-				src={src}
-				alt={alt}
+		<div
+			className="flex flex-col justify-between h-80 overflow-y-auto overflow-x-hidden shadow-elevation-medium shadow-gray-600 rounded-lg shadow-none hover:shadow-elevation-high duration-150"
+			title={description}
+		>
+			<div
+				className="h-full w-full rounded-md object-none bg-cover bg-pan-right"
+				style={{ backgroundImage: `url("${src}")` }}
 			/>
 
 			<div className="flex items-center justify-center">
-				<Link
-					className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-					to={demo}
-				>
-					Demo
-				</Link>
+				{demo && (
+					<Link
+						className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
+						to={demo}
+					>
+						Demo
+					</Link>
+				)}
 
 				<Link
-					className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+					className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
 					to={code}
 				>
 					Code
@@ -70,10 +69,40 @@ function Card({ src, alt, demo, code }: CardProps) {
 /**
  * muse
  * super mario
- * 
+ * ignite lab
+ * this website
  */
 
-const imagesOfProjects = [{ src: "", alt: "", demo: "", code: "" }];
+const cardsOfProjects: CardProps[] = [
+	{
+		src: "/projects-screenshots/muse.png",
+		description:
+			"Muse is the work I'm most proud of, especially because is I did it on my own. It's an Electron + React based app that downloads and plays audio from YouTube. Some of the tech stack used within it are: Typescript, Vite, Stitches, RadixUI, ffmpeg, Zustand, Dprint, Koa, NodeJS.",
+		demo: "",
+		code: "",
+	},
+	{
+		src: "/projects-screenshots/super-mario-bros.png",
+		description:
+			"Super Mario Bros is a browser replica of one of the most popular games of all time. Made along a course YouTube video from **. On this, it is replicated the first level of the game, introducing game-making in plain Javascript inside a browser.",
+		demo: "",
+		code: "",
+	},
+	{
+		src: "/projects-screenshots/ignite-lab.png",
+		description:
+			"Ignite Lab is a demo one-page website to make an online subscription (to whatever) saving it on an Apollo GraphQl database. It is made using TailwindCSS.",
+		demo: "",
+		code: "",
+	},
+	{
+		src: "/projects-screenshots/",
+		description:
+			"This website!! It is made using Remix, TailwindCSS, React, Zustand, Typescript, ESlint.",
+		demo: "",
+		code: "",
+	},
+];
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -81,8 +110,8 @@ const imagesOfProjects = [{ src: "", alt: "", demo: "", code: "" }];
 // Types:
 
 type CardProps = {
+	description: string;
 	demo: string;
 	code: string;
 	src: string;
-	alt: string;
 };
