@@ -16,9 +16,7 @@ export function Projects() {
 			<P text="Check out some of my work here" />
 
 			<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-				{cardsOfProjects.map(card => (
-					<Card key={card.src} {...card} />
-				))}
+				{cardsOfProjectsJSX}
 			</div>
 		</Section>
 	);
@@ -69,51 +67,81 @@ function Card({ src, description, demo, code }: CardProps) {
 // Constants:
 
 /**
- * muse
- * super mario
- * ignite lab
- * this website
+ * 1. muse
+ * 2. super mario
+ * 3. ignite lab
+ * 4. this website
+ * 5. nlw-e-sports
+ * 6. remix-jokes
+ * 7. nlw-return
  */
 
 const cardsOfProjects: CardProps[] = [
 	{
-		src: "/projects-screenshots/muse.png",
 		description:
 			"Muse is the work I'm most proud of, especially because is I did it on my own. It's an Electron + React based app that downloads and plays audio from YouTube. Some of the tech stack used within it are: Typescript, Vite, Stitches, RadixUI, ffmpeg, Zustand, Dprint, Koa, NodeJS.",
-		demo: "",
-		code: "",
+		demo: "https://github.com/Gabriel-Alves-Cunha/muse/releases",
+		code: "https://github.com/Gabriel-Alves-Cunha/muse",
+		src: "/projects-screenshots/muse.png",
 	},
 	{
-		src: "/projects-screenshots/super-mario-bros.png",
 		description:
 			"Super Mario Bros is a browser replica of one of the most popular games of all time. Made along a course YouTube video from **. On this, it is replicated the first level of the game, introducing game-making in plain Javascript inside a browser.",
+		code: "https://github.com/Gabriel-Alves-Cunha/super-mario-bros",
+		src: "/projects-screenshots/super-mario-bros.png",
 		demo: "",
-		code: "",
 	},
 	{
-		src: "/projects-screenshots/ignite-lab.png",
 		description:
 			"Ignite Lab is a demo one-page website to make an online subscription (to whatever) saving it on an Apollo GraphQl database. It is made using TailwindCSS.",
-		demo: "",
-		code: "",
+		code: "https://github.com/Gabriel-Alves-Cunha/Ignite-Lab",
+		src: "/projects-screenshots/ignite-lab.png",
+		demo: "https://ignite-lab-omega.vercel.app/",
 	},
 	{
-		src: "/projects-screenshots/",
 		description:
 			"This website!! It is made using Remix, TailwindCSS, React, Zustand, Typescript, ESlint.",
+		code: "https://github.com/Gabriel-Alves-Cunha/my-portfolio",
+		src: "/projects-screenshots/my-portfolio.png",
 		demo: "",
-		code: "",
+	},
+	{
+		description:
+			"NLW E Sports is a demo project made along Rocketseat's Next Level Week course, englobing a mobile (React Native), web (React) and a server (Node) version, using Prisma to handle an SQLite database. The tech stack includes: Typescript, Axios, Vite, Tailwind, Radix UI, Expo, Express, Vitest.",
+		code: "https://github.com/Gabriel-Alves-Cunha/nlw-e-sports",
+		src: "/projects-screenshots/nlw-e-sports-web.png",
+		demo: "",
+	},
+	{
+		description:
+			"Remix Jokes is a tutorial from the Remix website serving as comprehensive way to getting an overview of the primary APIs available in Remix. It is deployed on Vercel with PostgreSQL on a Supabase database, Tailwind, React, Zustand, Typescript, ESlint.",
+		code: "https://github.com/Gabriel-Alves-Cunha/remix-jokes",
+		src: "/projects-screenshots/remix-jokes.png",
+		demo: "https://remix-jokes-lac.vercel.app/",
+	},
+	{
+		description:
+			"NLW Return is a little project made with Rocketseat englobing mobile (React Native), server (Node) and web (React). It is a little button on the bottom right corner that you can use to quickly send a feedback on something, optionally sending a screenshot of your browser page. Made using of Typescript, Prisma, Axios, Headless UI, Vite, Vitest.",
+		code: "https://github.com/Gabriel-Alves-Cunha/nlw-return",
+		demo: "https://nlw-return-web-umber.vercel.app/",
+		src: "/projects-screenshots/nlw-return.png",
 	},
 ];
+
+////////////////////////////////////////////////
+
+const cardsOfProjectsJSX = cardsOfProjects.map(card => (
+	<Card key={card.src} {...card} />
+));
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // Types:
 
-type CardProps = {
+type CardProps = Readonly<{
 	description: string;
 	demo: string;
 	code: string;
 	src: string;
-};
+}>;

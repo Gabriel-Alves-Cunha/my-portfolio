@@ -1,1 +1,3 @@
-* see how to post on github.io
+* see how to post on `github.io`.
+* screenshot of this website.
+* change texts of home and about.
