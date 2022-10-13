@@ -74,6 +74,7 @@ function Card({ src, description, demo, code }: CardProps) {
  * 5. nlw-e-sports
  * 6. remix-jokes
  * 7. nlw-return
+ * 8. design-system
  */
 
 const cardsOfProjects: CardProps[] = [
@@ -125,6 +126,13 @@ const cardsOfProjects: CardProps[] = [
 		code: "https://github.com/Gabriel-Alves-Cunha/nlw-return",
 		demo: "https://nlw-return-web-umber.vercel.app/",
 		src: "/projects-screenshots/nlw-return.png",
+	},
+	{
+		description:
+			"Ignite Lab Design System is a project made with Rocketseat englobing Storybook, Figma, React, Tailwind. With this, I learned how to make simple designs on Figma, port them to React with Tailwind tokens, document them on storybook and to deploy this doc on Github Pages.",
+		code: "https://github.com/Gabriel-Alves-Cunha/design-system/",
+		demo: "https://gabriel-alves-cunha.github.io/design-system/",
+		src: "/projects-screenshots/design-system.png",
 	},
 ];
 
