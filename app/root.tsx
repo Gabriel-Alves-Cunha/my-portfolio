@@ -30,7 +30,8 @@ export const meta: MetaFunction = () => {
 		viewport: "width=device-width,initial-scale=1",
 		keywords: "web,dev,programming,developer",
 		"twitter:card": "summary_large_image",
-		"twitter:image": "/twitter:card.png",
+		"twitter:image":
+			"https://portfolio-of-gabriel.vercel.app/twitter:card.png",
 		"twitter:description": description,
 		// "twitter:creator": "@remix_run",
 		"twitter:image:alt": imgAlt,
