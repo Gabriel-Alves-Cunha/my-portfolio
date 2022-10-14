@@ -22,13 +22,13 @@ export function BlueAnchorButton({
 			{title}
 
 			{arrow && (
-				<span className="group-hover:rotate-90 duration-300 ml-2">
+				<span className="ml-2 duration-300 group-hover:rotate-90">
 					<ArrowRight size={25} />
 				</span>
 			)}
 
 			{email && (
-				<span className="group-hover:jello-horizontal duration-300 ml-4 stroke-0">
+				<span className="ml-4 duration-300 stroke-0 group-hover:jello-horizontal">
 					<Email size={25} />
 				</span>
 			)}

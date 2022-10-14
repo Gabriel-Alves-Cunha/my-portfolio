@@ -10,19 +10,20 @@ import { IoMailOutline as Email } from "react-icons/io5";
 export function SocialLinks() {
 	return (
 		<ul className="hidden lg:flex flex-col top-[35%] left-0 fixed">
-			{contactLinks.map(link => (
+			{contactLinks.map(({ children, href, title, download = false }) => (
 				<li
 					className="flex justify-between items-center w-40 h-14 px-4 ml-[-100px] bg-secondary hover:rounded-md duration-200 hover:ml-[-10px] first:rounded-tr-md last:rounded-br-md"
-					key={link.href}
+					title={title}
+					key={href}
 				>
 					<a
-						className="flex justify-between items-center h-full w-full text-white"
-						aria-label={link.title}
+						className="flex items-center justify-between w-full h-full text-white"
 						rel="noreferrer"
 						target="_blank" // Open on a new (blank) tab!
-						{...link}
+						download={download}
+						href={href}
 					>
-						{link.children}
+						{children}
 					</a>
 				</li>
 			))}

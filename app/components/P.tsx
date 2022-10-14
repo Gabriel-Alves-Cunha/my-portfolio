@@ -12,5 +12,5 @@ export function P({ text, className = "", ...rest }: Props) {
 }
 
 interface Props extends HTMLAttributes<HTMLParagraphElement> {
-	readonly text: string;
+	text: string;
 }

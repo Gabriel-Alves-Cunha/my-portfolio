@@ -1,3 +1,3 @@
-export function SectionSpacer() {
-	return <div className="h-36 md:h-30 lg:h-28 w-full" />;
-}
+export const SectionSpacer = () => (
+	<div className="w-full h-28 md:h-30 lg:h-30" />
+);

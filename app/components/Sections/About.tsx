@@ -17,14 +17,25 @@ export function About() {
 		<Section id="About">
 			<Title title="About" />
 
-			<P text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, unde veritatis molestquia dolore pariatur et blanditiis, vitae nesciunt ipsa ut error, officiis assumenda dolorum. Quasi sit eaque eius dicta." />
+			<p className="pb-8 py-6 font-base tracking-wide text-xl">
+				I first was introduced to programming in college with the C language. I
+				was fascinated by how computers work under the screen, so I began to
+				watch tutorials on Java on YouTube. Eventually, I drifted to the{" "}
+				<span className="bg-lin">
+					<span>JS/HTML/CSS</span>
+				</span>{" "}
+				universe and was flabbergasted by what you could build relatively easily
+				with this trio.
+			</p>
+
+			<P text="Skipping to today, I now am very proficient in Typescript and enjoy making things in their entirety, from back to the front end, sometimes on mobile or desktop! I'm super eager to learn about the computer world and can't wait to start my career." />
 
 			<br />
 
-			<ul className="grid grid-cols-1 gap-4 md:grid-cols-2 my-8 p-8 w-full rounded-xl bg-secondary text-sm">
+			<ul className="grid w-full grid-cols-1 gap-4 p-8 my-8 text-sm md:grid-cols-2 rounded-xl bg-secondary">
 				{aboutItems.map(({ label, text, Icon }, index) => (
 					<li className="flex items-start gap-x-2" key={index}>
-						<div className="flex justify-center items-center">
+						<div className="flex items-center justify-center">
 							<Icon size={24} />
 						</div>
 
@@ -35,12 +46,14 @@ export function About() {
 				))}
 			</ul>
 
-			<ul className="lg:hidden grid grid-cols-1 gap-4 sm:grid-cols-2 my-8 p-8 w-full rounded-xl bg-secondary">
-				{contactItems.map(({ label, Icon, href }) => (
+			<ul className="grid w-full grid-cols-1 gap-4 p-8 my-8 lg:hidden sm:grid-cols-2 rounded-xl bg-secondary">
+				{contactItems.map(({ label, Icon, href, title, download = false }) => (
 					<a
 						className="group w-fit"
+						download={download}
 						rel="noreferrer"
 						target="_blank" // Open on a new (blank) tab!
+						title={title}
 						href={href}
 						key={href}
 					>
@@ -52,10 +65,6 @@ export function About() {
 					</a>
 				))}
 			</ul>
-
-			<br />
-
-			<P text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis enim reiciendis debitis  utem amet necessitatibus error corrupti	incidunt soluta ipsam, quas accusamus nam dolorum maiores eligendi sit illum alias explicabo!" />
 		</Section>
 	);
 }
@@ -88,24 +97,24 @@ const aboutItems = [
 const contactItems = [
 	{
 		href: "https://github.com/Gabriel-Alves-Cunha/",
-		"aria-label": "Access my Github",
+		title: "Access my Github",
 		label: "Github",
 		Icon: Github,
 	},
 	{
 		href: "https://www.linkedin.com/in/gabriel-alves-cunha/",
-		"aria-label": "Access my LinkedIn",
+		title: "Access my LinkedIn",
 		label: "Linkedin",
 		Icon: Linkedin,
 	},
 	{
 		href: "mailto:gabriel925486@gmail.com",
-		"aria-label": "Mail me",
+		title: "Mail me",
 		label: "Email",
 		Icon: Mail,
 	},
 	{
-		"aria-label": "Download my Resume",
+		title: "Download my Resume",
 		href: "/resume.pdf",
 		label: "Resume",
 		download: true,

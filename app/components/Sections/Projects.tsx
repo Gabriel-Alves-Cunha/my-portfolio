@@ -15,7 +15,7 @@ export function Projects() {
 
 			<P text="Check out some of my work here" />
 
-			<div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+			<div className="grid gap-8 px-12 sm:grid-cols-2 md:grid-cols-3 sm:px-0">
 				{cardsOfProjectsJSX}
 			</div>
 		</Section>
@@ -31,18 +31,18 @@ function Card({ src, description, demo, code }: CardProps) {
 	return (
 		<div className="group">
 			<div
-				className="flex flex-col justify-between h-80 overflow-y-auto overflow-x-hidden rounded-lg will-change-transform shadow-none group-hover:shadow-elevation group-hover:translate-x-1 group-hover:-translate-y-2 duration-150"
+				className="flex flex-col justify-between overflow-x-hidden overflow-y-auto duration-150 rounded-lg shadow-none h-80 will-change-transform group-hover:shadow-elevation group-hover:translate-x-1 group-hover:-translate-y-2"
 				title={description}
 			>
 				<div
-					className="h-full w-full rounded-md object-none bg-cover bg-pan-right"
+					className="object-none w-full h-full bg-cover rounded-md bg-pan-right"
 					style={{ backgroundImage: `url("${src}")` }}
 				/>
 
 				<div className="flex items-center justify-center">
 					{demo && (
 						<Link
-							className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
+							className="flex justify-center w-full px-6 py-3 duration-200 rounded-lg hover:bg-secondary"
 							to={demo}
 						>
 							Demo
@@ -50,7 +50,7 @@ function Card({ src, description, demo, code }: CardProps) {
 					)}
 
 					<Link
-						className="flex justify-center w-full px-6 py-3 rounded-lg duration-200 hover:bg-secondary"
+						className="flex justify-center w-full px-6 py-3 duration-200 rounded-lg hover:bg-secondary"
 						to={code}
 					>
 						Code
@@ -68,30 +68,29 @@ function Card({ src, description, demo, code }: CardProps) {
 
 /**
  * 1. muse
- * 2. super mario
+//  * 2. super mario
  * 3. ignite lab
- * 4. this website
- * 5. nlw-e-sports
- * 6. remix-jokes
- * 7. nlw-return
- * 8. design-system
+ * 4. nlw-e-sports
+ * 5. remix-jokes
+ * 6. nlw-return
+ * 7. design-system
  */
 
 const cardsOfProjects: CardProps[] = [
 	{
 		description:
-			"Muse is the work I'm most proud of, especially because is I did it on my own. It's an Electron + React based app that downloads and plays audio from YouTube. Some of the tech stack used within it are: Typescript, Vite, Stitches, RadixUI, ffmpeg, Zustand, Dprint, Koa, NodeJS.",
+			"Muse is the work I'm most proud of, especially because I did it on my own. It's an Electron + React-based app that downloads and plays audio from YouTube. Some of the tech stack used within it are Typescript, Vite, Stitches, RadixUI, FFmpeg, Zustand, Dprint, Koa, NodeJS.",
 		demo: "https://github.com/Gabriel-Alves-Cunha/muse/releases",
 		code: "https://github.com/Gabriel-Alves-Cunha/muse",
 		src: "/projects-screenshots/muse.png",
 	},
-	{
-		description:
-			"Super Mario Bros is a browser replica of one of the most popular games of all time. Made along a course YouTube video from **. On this, it is replicated the first level of the game, introducing game-making in plain Javascript inside a browser.",
-		code: "https://github.com/Gabriel-Alves-Cunha/super-mario-bros",
-		src: "/projects-screenshots/super-mario-bros.png",
-		demo: "",
-	},
+	// {
+	// 	description:
+	// 		"Super Mario Bros is a browser replica of one of the most popular games of all time. Made along a course YouTube video from **. On this, it is a replica of the first level of the game, introducing game-making in plain Javascript inside a browser.",
+	// 	code: "https://github.com/Gabriel-Alves-Cunha/super-mario-bros",
+	// 	src: "/projects-screenshots/super-mario-bros.png",
+	// 	demo: "",
+	// },
 	{
 		description:
 			"Ignite Lab is a demo one-page website to make an online subscription (to whatever) saving it on an Apollo GraphQl database. It is made using TailwindCSS.",
@@ -101,35 +100,28 @@ const cardsOfProjects: CardProps[] = [
 	},
 	{
 		description:
-			"This website!! It is made using Remix, TailwindCSS, React, Zustand, Typescript, ESlint.",
-		code: "https://github.com/Gabriel-Alves-Cunha/my-portfolio",
-		src: "/projects-screenshots/my-portfolio.png",
-		demo: "",
-	},
-	{
-		description:
-			"NLW E Sports is a demo project made along Rocketseat's Next Level Week course, englobing a mobile (React Native), web (React) and a server (Node) version, using Prisma to handle an SQLite database. The tech stack includes: Typescript, Axios, Vite, Tailwind, Radix UI, Expo, Express, Vitest.",
+			"NLW E-Sports is a demo project made along Rocketseat's Next Level Week course, englobing a mobile (React Native), web (React) and a server (Node) version, using Prisma to handle an SQLite database. The tech stack includes Typescript, Axios, Vite, Tailwind, Radix UI, Expo, Express, and Vitest.",
 		code: "https://github.com/Gabriel-Alves-Cunha/nlw-e-sports",
 		src: "/projects-screenshots/nlw-e-sports-web.png",
 		demo: "",
 	},
 	{
 		description:
-			"Remix Jokes is a tutorial from the Remix website serving as comprehensive way to getting an overview of the primary APIs available in Remix. It is deployed on Vercel with PostgreSQL on a Supabase database, Tailwind, React, Zustand, Typescript, ESlint.",
+			"Remix Jokes is a tutorial from the Remix website serving as a comprehensive way to get an overview of the primary APIs available in Remix. It is deployed on Vercel with PostgreSQL on a Supabase database, Tailwind, React, Zustand, Typescript, ESlint.",
 		code: "https://github.com/Gabriel-Alves-Cunha/remix-jokes",
 		src: "/projects-screenshots/remix-jokes.png",
 		demo: "https://remix-jokes-lac.vercel.app/",
 	},
 	{
 		description:
-			"NLW Return is a little project made with Rocketseat englobing mobile (React Native), server (Node) and web (React). It is a little button on the bottom right corner that you can use to quickly send a feedback on something, optionally sending a screenshot of your browser page. Made using of Typescript, Prisma, Axios, Headless UI, Vite, Vitest.",
+			"NLW Return is a little project made with Rocketseat englobing mobile (React Native), server (Node) and web (React). It is a little button on the bottom right corner that you can use to quickly send feedback on something, optionally sending a screenshot of your browser page. Made using Typescript, Prisma, Axios, Headless UI, Vite, Vitest.",
 		code: "https://github.com/Gabriel-Alves-Cunha/nlw-return",
 		demo: "https://nlw-return-web-umber.vercel.app/",
 		src: "/projects-screenshots/nlw-return.png",
 	},
 	{
 		description:
-			"Ignite Lab Design System is a project made with Rocketseat englobing Storybook, Figma, React, Tailwind. With this, I learned how to make simple designs on Figma, port them to React with Tailwind tokens, document them on storybook and to deploy this doc on Github Pages.",
+			"Ignite Lab Design System is a project made with Rocketseat englobing Storybook, Figma, React, Tailwind. With this, I learned how to make simple designs on Figma, port them to React with Tailwind tokens, document them on storybook and deploy this doc on Github Pages.",
 		code: "https://github.com/Gabriel-Alves-Cunha/design-system/",
 		demo: "https://gabriel-alves-cunha.github.io/design-system/",
 		src: "/projects-screenshots/design-system.png",

@@ -11,6 +11,7 @@
 	body {
 		background-repeat: no-repeat;
 		background-size: 100%;
+
 		background: linear-gradient(
 			to bottom,
 			#b721ff,
@@ -71,6 +72,23 @@
 
 		background-color: #f2c;
 		transition: width 0.2s;
+	}
+
+	.bg-lin {
+		display: inline-block;
+
+		background: linear-gradient(to right, mediumturquoise, mediumpurple);
+		padding: 0.1em 0.3em;
+		border-radius: 0.2em;
+		color: black;
+
+		transform: skewX(-20deg);
+	}
+
+	.bg-lin span {
+		display: inline-block;
+
+		transform: skewX(20deg);
 	}
 
 	.nav {

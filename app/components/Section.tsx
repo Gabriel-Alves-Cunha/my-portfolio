@@ -4,7 +4,7 @@ export function Section({ children, className = "", ...rest }: Props) {
 	return (
 		<section
 			className={
-				"flex flex-col justify-start w-full h-full max-w-screen-lg p-4 mx-auto pt-6 text-white " +
+				"flex flex-col justify-start w-full h-full max-w-screen-lg mx-auto text-white " +
 				className
 			}
 			{...rest}
@@ -14,6 +14,4 @@ export function Section({ children, className = "", ...rest }: Props) {
 	);
 }
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
-	readonly children: React.ReactNode;
-}
+type Props = HTMLAttributes<HTMLDivElement>;

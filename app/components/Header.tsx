@@ -38,7 +38,7 @@ export function Header() {
 				role="dialog"
 			>
 				<button
-					className="cursor-pointer pr-4 text-gray-500 md:hidden"
+					className="pr-4 text-gray-500 cursor-pointer md:hidden"
 					onClick={() => setShowNav(!showNav)}
 				>
 					{showNav ? <Close size={30} /> : <Menu size={30} />}

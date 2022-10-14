@@ -25,16 +25,16 @@
     "importHelpers": true,
     "alwaysStrict": true,
     "skipLibCheck": true,
-    "target": "ESNext",
-    "jsx": "react-jsx",
-    "module": "ESNext",
     "sourceMap": false,
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
     "allowJs": true,
     "checkJs": true,
-    "baseUrl": ".",
     "pretty": true,
     "strict": true,
     "noEmit": true,
+    "baseUrl": ".",
     "lib": [
       "DOM.Iterable",
       "ES2022",
@@ -80,7 +80,7 @@
   ],
   "include": [
     "remix.env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.ts"
   ]
 }

@@ -1779,17 +1779,17 @@
   resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-3.0.0.tgz#443655b74713ec65531726fb5a30c5c528c804bf"
   integrity sha512-TNQK6cufwrhd8ASDk5YHHenH8Xhp9sY8xUjOTKnQQI37KLk+Sw2HlHhT5rzUFN23ahosUlkY8InwtYUmSNb9kw==
 
-"@vercel/node@^2.5.22":
-  version "2.5.22"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.22.tgz#48422f7dd78468adb753e5755a42506c300b7809"
-  integrity sha512-phlgW4qHGEt/yQ/nbGCd3vrFM0n48/MBbvmAKgTeVE/mjzdWxPnuSHNQlaipJkzfT3tv8kiiJu9ZoicuDoACTw==
+"@vercel/node@^2.5.24":
+  version "2.5.24"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.24.tgz#f2ca3418e94afc9c99d301b131795c2e326a75f1"
+  integrity sha512-DrvAQMyngMjnyHr3uhvShXi1f3iBTrURa/6vLQkWPJv1lfcVP/tcz7uwVX4tAb0a0i+reNhMMdUxH75m/Q6OdA==
   dependencies:
     "@edge-runtime/vm" "1.1.0-beta.36"
     "@types/node" "*"
     "@vercel/build-utils" "5.5.4"
     "@vercel/node-bridge" "3.0.0"
     "@vercel/static-config" "2.0.3"
-    edge-runtime "1.1.0-beta.37"
+    edge-runtime "1.1.0-beta.38"
     esbuild "0.14.47"
     exit-hook "2.2.1"
     node-fetch "2.6.7"
@@ -2852,10 +2852,10 @@ duplexify@^3.5.0, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-edge-runtime@1.1.0-beta.37:
-  version "1.1.0-beta.37"
-  resolved "https://registry.yarnpkg.com/edge-runtime/-/edge-runtime-1.1.0-beta.37.tgz#e88eafba4f3630990468bb53efca6f48d76063c4"
-  integrity sha512-IP0xYNmp0XXoXVnrAf/e67224ZkMUUBMyUUohVxWWI5XdyetIGRNWp3GifDy3LpbuE02yv42rgtoE+tm+whcLA==
+edge-runtime@1.1.0-beta.38:
+  version "1.1.0-beta.38"
+  resolved "https://registry.yarnpkg.com/edge-runtime/-/edge-runtime-1.1.0-beta.38.tgz#f15f136a553e342744aae1a345368bc2c6298a4e"
+  integrity sha512-MY6/XcnGGuvLmwAR6PQizjhW/ABjVnmpJQmhJRacmo7K7LhuevszrPFVf0GmwVrr9PUahrvgmZYydQLSTpS5AA==
   dependencies:
     "@edge-runtime/format" "1.1.0-beta.33"
     "@edge-runtime/vm" "1.1.0-beta.36"
@@ -7295,11 +7295,6 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg==
 
-use-sync-external-store@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
-  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
-
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
@@ -7541,13 +7536,6 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
-
-zustand@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.1.2.tgz#4912b24741662d8a84ed1cb52198471cb369c4b6"
-  integrity sha512-gcRaKchcxFPbImrBb/BKgujOhHhik9YhVpIeP87ETT7uokEe2Szu7KkuZ9ghjtD+/KKkcrRNktR2AiLXPIbKIQ==
-  dependencies:
-    use-sync-external-store "1.2.0"
 
 zwitch@^2.0.0:
   version "2.0.2"

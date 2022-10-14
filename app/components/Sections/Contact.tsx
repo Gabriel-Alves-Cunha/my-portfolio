@@ -12,25 +12,25 @@ export function Contact() {
 
 			<form
 				action="https://getform.io/f/40966000-c467-4da1-a3b0-9ee71cad0577"
-				className="flex flex-col w-full place-items-center gap-4"
+				className="flex flex-col w-full gap-4 place-items-center"
 				method="POST"
 			>
 				<input
-					className="p-2 w-full lg:w-1/2 font-base tracking-wide bg-primary border-2 rounded-md text-white focus:outline-none"
+					className="w-full p-2 tracking-wide text-white border-2 rounded-md lg:w-1/2 font-base bg-primary focus:outline-none"
 					placeholder="Enter your name"
 					type="text"
 					name="Name"
 				/>
 
 				<input
-					className="p-2 w-full lg:w-1/2 font-base tracking-wide bg-primary border-2 rounded-md text-white focus:outline-none"
+					className="w-full p-2 tracking-wide text-white border-2 rounded-md lg:w-1/2 font-base bg-primary focus:outline-none"
 					placeholder="Enter your email"
 					type="email"
 					name="Email"
 				/>
 
 				<textarea
-					className="p-2 w-full lg:w-1/2 font-base tracking-wide bg-primary border-2 rounded-md text-white focus:outline-none resize-none"
+					className="w-full p-2 tracking-wide text-white border-2 rounded-md resize-none lg:w-1/2 font-base bg-primary focus:outline-none"
 					placeholder="Enter your message"
 					name="Message"
 					spellCheck
@@ -38,7 +38,7 @@ export function Contact() {
 				/>
 
 				<BlueAnchorButton
-					className="mx-auto self-center mt-8"
+					className="self-center mx-auto mt-8"
 					title="Say Hi"
 					type="submit"
 					email

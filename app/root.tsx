@@ -20,16 +20,20 @@ import styles from "./tailwind.css";
 // Links, Meta and actions:
 
 export const meta: MetaFunction = () => {
-	const description = "Read awesome news in the developer space!";
+	const imgAlt = // limited to 420 chars.
+		"Heading saying: 'Hi, there! I'm a Full-Stack Developer', under it: 'Passionate programmer seeking an entry-level full-stack developer position in a reputed company where I can use my educational background to develop my skills. Knowledgeable in user interface, testing, and debugging processes, highly proﬁcient in ReactJS, Javascript, Typescript, NodeJS. I am very eager to start my career and learn among others'.";
+	const description =
+		"This is the Portfolio of Gabriel Alves Cunha, a Full Stack Developer.";
 	const title = "Gabriel's Portfolio";
 
 	return {
-		// "twitter:image": "https://remix-jokes.lol/social.png",
 		viewport: "width=device-width,initial-scale=1",
-		keywords: "Hacker,News,Computer,Developer",
-		// "twitter:card": "summary_large_image",
+		keywords: "web,dev,programming,developer",
+		"twitter:card": "summary_large_image",
+		"twitter:image": "/twitter:card.png",
 		"twitter:description": description,
 		// "twitter:creator": "@remix_run",
+		"twitter:image:alt": imgAlt,
 		"twitter:title": title,
 		// "twitter:site": "@remix_run",
 		charset: "utf-8",
@@ -58,15 +62,15 @@ export const links: LinksFunction = () => [
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 
-function Document({ children, title = "My Portfolio" }: DocumentProps) {
+function Document({ children, title = "Gabriel's Portfolio" }: DocumentProps) {
 	return (
 		<html lang="en">
 			<head>
-				<title>{title}</title>
+				<Meta />
 
 				<Links />
 
-				<Meta />
+				<title>{title}</title>
 			</head>
 
 			<body>
