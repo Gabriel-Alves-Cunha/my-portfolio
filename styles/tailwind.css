@@ -41,8 +41,6 @@
 		box-shadow: 0 3px 26px 0 rgba(0, 0, 0, 0.2);
 		background-color: #181a1b;
 		border-radius: 20px;
-		margin: 80px 10%;
-		padding: 60px;
 	}
 
 	:root {
@@ -80,7 +78,7 @@
 		background: linear-gradient(to right, mediumturquoise, mediumpurple);
 		padding: 0.1em 0.3em;
 		border-radius: 0.2em;
-		color: black;
+		color: white;
 
 		transform: skewX(-20deg);
 	}

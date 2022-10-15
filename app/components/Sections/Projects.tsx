@@ -15,7 +15,7 @@ export function Projects() {
 
 			<P text="Check out some of my work here" />
 
-			<div className="grid gap-8 px-12 sm:grid-cols-2 md:grid-cols-3 sm:px-0">
+			<div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 				{cardsOfProjectsJSX}
 			</div>
 		</Section>
@@ -31,7 +31,7 @@ function Card({ src, description, demo, code }: CardProps) {
 	return (
 		<div className="group">
 			<div
-				className="flex flex-col justify-between overflow-x-hidden overflow-y-auto duration-150 rounded-lg shadow-none h-80 will-change-transform group-hover:shadow-elevation group-hover:translate-x-1 group-hover:-translate-y-2"
+				className="flex flex-col w-full justify-between overflow-x-hidden overflow-y-auto duration-150 rounded-lg shadow-none h-80 will-change-transform group-hover:shadow-elevation group-hover:translate-x-1 group-hover:-translate-y-2"
 				title={description}
 			>
 				<div

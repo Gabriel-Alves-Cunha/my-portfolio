@@ -9,7 +9,7 @@ export function Home() {
 		<Section id="Home" className="md:flex-row">
 			<div className="flex flex-col justify-start md:w-full">
 				<h2 className="text-4xl font-bold text-white md:text-5xl lg:text-7xl">
-					Hi, there! I&apos;m a Full-Stack Developer
+					Hi, there! I&apos;m a Full-Stack Web Developer
 				</h2>
 
 				<p className="max-w-md py-4 leading-6 text-gray-500">

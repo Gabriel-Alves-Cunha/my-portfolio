@@ -32,7 +32,7 @@ export function About() {
 
 			<br />
 
-			<ul className="grid w-full grid-cols-1 gap-4 p-8 my-8 text-sm md:grid-cols-2 rounded-xl bg-secondary">
+			<ul className="grid w-full grid-cols-1 gap-6 p-8 my-8 text-sm md:grid-cols-2 lg:grid-cols-3 rounded-xl bg-secondary">
 				{aboutItems.map(({ label, text, Icon }, index) => (
 					<li className="flex items-start gap-x-2" key={index}>
 						<div className="flex items-center justify-center">
@@ -46,7 +46,7 @@ export function About() {
 				))}
 			</ul>
 
-			<ul className="grid w-full grid-cols-1 gap-4 p-8 my-8 lg:hidden sm:grid-cols-2 rounded-xl bg-secondary">
+			<ul className="grid w-full grid-cols-1 gap-6 p-8 my-8 lg:hidden md:grid-cols-2 rounded-xl bg-secondary">
 				{contactItems.map(({ label, Icon, href, title, download = false }) => (
 					<a
 						className="group w-fit"

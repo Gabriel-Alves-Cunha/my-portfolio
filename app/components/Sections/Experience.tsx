@@ -24,7 +24,7 @@ export function Experience() {
 
 			<P text="These are some of the technologies I've worked with" />
 
-			<div className="grid w-full grid-cols-2 gap-8 px-12 py-8 text-center sm:grid-cols-3 sm:p-0">
+			<div className="grid w-full grid-cols-1 gap-8 px-12 py-8 text-center md:grid-cols-3 sm:p-0">
 				{techs.map(tech => (
 					<Card key={tech.src} {...tech} />
 				))}

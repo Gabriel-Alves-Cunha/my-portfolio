@@ -30,8 +30,7 @@ export const meta: MetaFunction = () => {
 		viewport: "width=device-width,initial-scale=1",
 		keywords: "web,dev,programming,developer",
 		"twitter:card": "summary_large_image",
-		"twitter:image":
-			"https://portfolio-of-gabriel.vercel.app/twitter:card.png",
+		"twitter:image": "https://portfolio-of-gabriel.vercel.app/twitter:card.png",
 		"twitter:description": description,
 		// "twitter:creator": "@remix_run",
 		"twitter:image:alt": imgAlt,
@@ -94,7 +93,7 @@ export default function App() {
 		<Document>
 			<Header />
 
-			<main className="min-h-full">
+			<main className="min-h-full p-7 md:p-16 lg:p-16 my-16 mx-[5%] md:mx-[10%] lg:mx-[10%]">
 				<Outlet />
 			</main>
 		</Document>
